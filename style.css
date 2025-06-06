@@ -1,0 +1,243 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, #ffe6f0, #ffffff);
+  margin: 0;
+  padding: 0;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.container {
+  max-width: 500px;
+  width: 90%;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(255, 105, 135, 0.3);
+  padding: 30px 25px;
+  margin: 40px auto;
+  transition: transform 0.3s ease;
+}
+
+.container:hover {
+  transform: translateY(-4px);
+}
+
+h1, h2, h3 {
+  text-align: center;
+  color: #d81b60;
+}
+
+.saldo-card, .metas {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(255, 105, 135, 0.2);
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+  transition: box-shadow 0.3s;
+  position: relative;
+}
+
+.saldo-card:hover, .metas:hover {
+  box-shadow: 0 6px 20px rgba(255, 105, 135, 0.3);
+}
+
+.saldo-card h2 {
+  margin: 0;
+  color: #2e7d32;
+  font-size: 1.5rem;
+}
+
+.mensaje {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 15px;
+  opacity: 0.95;
+  transition: opacity 0.4s;
+  color: #444;
+}
+
+input, button {
+  width: 100%;
+  padding: 12px 14px;
+  margin-top: 8px;
+  font-size: 16px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+input {
+  border: 1px solid #ccc;
+  transition: border 0.3s;
+}
+
+input:focus {
+  border-color: #f06292;
+  box-shadow: 0 0 6px rgba(240, 98, 146, 0.3);
+}
+
+button {
+  background: #f06292;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background: #ec407a;
+  transform: translateY(-2px);
+}
+
+.section {
+  margin-bottom: 30px;
+}
+
+.meta {
+  margin-bottom: 20px;
+}
+
+.progress {
+  height: 14px;
+  background: #e0e0e0;
+  border-radius: 7px;
+  overflow: hidden;
+  margin-top: 6px;
+}
+
+.progress-bar {
+  height: 100%;
+  background: #f06292;
+  width: 0%;
+  transition: width 0.5s ease;
+  border-radius: 7px;
+}
+
+small {
+  display: block;
+  color: #777;
+  margin-top: 4px;
+  font-size: 0.85rem;
+}
+
+.thumb-up {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  font-size: 2rem;
+  animation: fadeOut 1.2s ease forwards;
+  opacity: 1;
+  pointer-events: none;
+}
+
+@keyframes fadeOut {
+  0% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.5) rotate(-10deg);
+  }
+  100% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+}
+
+/* Estilos para historial */
+#historialMovimientos {
+  margin-top: 15px;
+  padding: 10px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 5px #ccc;
+}
+
+.movimiento {
+  margin-bottom: 10px;
+  padding: 10px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #f0f0f0;
+}
+
+.movimiento.ingreso {
+  border-left: 5px solid #388e3c;
+}
+
+.movimiento.retiro {
+  border-left: 5px solid #c62828;
+}
+
+.movimiento small {
+  display: block;
+  color: #888;
+}
+
+/* Estilo para la ventana de la gráfica */
+#graficaVentana {
+  max-width: 600px;
+  width: 90%;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(255, 105, 135, 0.3);
+  padding: 30px 25px;
+  margin: 20px auto;
+  display: none;
+}
+
+#graficaVentana canvas {
+  width: 100% !important;
+  height: auto !important;
+}
+
+/* Estilos adicionales para la estructura básica */
+#appContent, #registerForm { 
+  display: none; 
+}
+
+.seccion { 
+  margin-top: 20px; 
+}
+
+#mensaje { 
+  transition: opacity 0.5s; 
+  opacity: 0; 
+  margin-bottom: 10px; 
+}
+
+/* Estilos para los movimientos */
+.movimiento { 
+  margin: 5px 0; 
+}
+
+.ingreso { 
+  color: green; 
+}
+
+.retiro { 
+  color: red; 
+}
+
+/* Estilos para las metas */
+.meta { 
+  margin: 10px 0; 
+}
+
+.progress { 
+  background: #ddd; 
+  height: 20px; 
+  border-radius: 10px; 
+  overflow: hidden; 
+}
+
+.progress-bar { 
+  background: #4caf50; 
+  height: 100%; 
+}
